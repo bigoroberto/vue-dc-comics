@@ -15,7 +15,7 @@ export default {
   components: {
     HeaderComp,
     MainComp,
-    FooterComp,
+    FooterComp
   }
 }
 </script>
