@@ -1,17 +1,37 @@
 <template>
   <main>
     <div class="container">
-      <h1>
-         Meglio la <span>MARVEL</span>
-      </h1>
+      <ProductCard 
+          v-for="(product,index) in products"
+          :key="index"
+          :card="product"
+          />
     </div>
 
   </main>
 </template>
 
 <script>
+
+import products from '@/assets/data/listadc.js';
+import ProductCard from "@/components/ProductCard.vue"
+
+
 export default {
-  name: 'Main'
+  name: 'MainComp',
+
+  components:{
+    ProductCard
+  },
+  data(){
+    return{
+      products
+    }
+  },
+
+  mounted(){
+    console.log(products)
+  }
 }
 </script>
 
@@ -20,6 +40,10 @@ main{
   padding: 50px 0;
   color: bisque;
   background-color: #1c1c1c;
+  div{
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 span{

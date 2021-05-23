@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderComp/>
+    <HeaderComp :menu="links"/>
     <MainComp/>
     <FooterComp/>
   </div>
@@ -16,6 +16,62 @@ export default {
     HeaderComp,
     MainComp,
     FooterComp
+  },
+  data(){
+    return{
+      links:[
+                {
+          text: 'Characters',
+          url: 'javascript:void(0)',
+          current: false
+        },
+        {
+          text: 'Comics',
+          url: 'javascript:void(0)',
+          current: true
+        },
+        {
+          text: 'Movies',
+          url: 'javascript:void(0)',
+          current: false
+        },
+        {
+          text: 'Tv',
+          url: 'javascript:void(0)',
+          current: false
+        },
+        {
+          text: 'Games',
+          url: 'javascript:void(0)',
+          current: false
+        },
+        {
+          text: 'Collectibles',
+          url: 'javascript:void(0)',
+          current: false
+        },
+        {
+          text: 'Videos',
+          url: 'javascript:void(0)',
+          current: false
+        },
+        {
+          text: 'Fans',
+          url: 'javascript:void(0)',
+          current: false
+        },
+        {
+          text: 'News',
+          url: 'javascript:void(0)',
+          current: false
+        },
+        {
+          text: 'Shop',
+          url: 'javascript:void(0)',
+          current: false
+        },
+      ]
+    }
   }
 }
 </script>
